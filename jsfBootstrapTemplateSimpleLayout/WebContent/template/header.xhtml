@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition>
+	<h:form>
+		<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><h:commandLink class="glyphicon glyphicon-log-in"
+							action="login.xhtml" value="Logout"></h:commandLink></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+		<ul class="nav nav-tabs">
+			<li class="active dropdown"><a href="#" data-toggle="dropdown"
+				class="dropdown-toggle">Home<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="../pages/users.xhtml">Users</a></li>
+					<li><a href="../pages/clients.xhtml">Clients</a></li>
+					<li><a href="../pages/components.xhtml">Components</a></li>
+					<li><a href="../pages/status.xhtml">Status</a></li>
+					<li><a href="../pages/ticketType.xhtml">Ticket-Type</a></li>
+					<li><a href="../pages/priority.xhtml">Priority</a></li>
+				</ul></li>
+			<li><a href="#">Request</a></li>
+		</ul>
+	</h:form>
+</ui:composition>
+</html>

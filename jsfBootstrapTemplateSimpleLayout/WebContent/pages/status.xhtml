@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/template/main.xhtml">
+	<ui:define name="content">
+		<div class="panel panel-primary">
+			<div class="panel-heading text-center">Manage Status</div>
+			<div class="panel-body">
+				<h:form>
+
+					<div class="container">
+						<div class="table-responsive">
+							<h:dataTable value="#{tasksStatusBean.statusDtos}" var="status"
+								styleClass="table table-hover" headerClass="order-table-header"
+								rowClasses="order-table-odd-row,order-table-even-row">
+
+								<h:column>
+									<f:facet name="header">Status Name</f:facet>
+    				#{status.statusName}
+    			</h:column>
+
+								<h:column>
+									<f:facet name="header">Action</f:facet>
+									<h:commandLink class=".btn-link"
+										action="#{tasksStatusBean.findTaskStatusById(status)}"
+										value="edit"></h:commandLink> / 
+									<h:commandLink class=".btn-link"
+										action="#{tasksStatusBean.deleteTaskStatus(status)}"
+										value="delete"></h:commandLink>
+								</h:column>s
+
+							</h:dataTable>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="text-center">
+							<h:commandButton class="btn btn-primary btn-md"
+								value="Add Status" action="manageStatus.xhtml" />
+						</div>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

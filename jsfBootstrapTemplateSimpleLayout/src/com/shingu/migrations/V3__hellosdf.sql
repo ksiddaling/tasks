@@ -1,0 +1,1 @@
+INSERT INTO `tasks`.`user` (`first_name`, `last_name`, `middle_name`, `contact_number`, `email`) VALUES ('shingu', 'p', 'm', '8904311125', 'shingu027@gmail.com');
